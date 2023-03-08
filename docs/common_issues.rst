@@ -70,7 +70,7 @@ Bulk update was introduced with Django 2.2. We can use the utility function
     >>> from django.utils.timezone import now
     >>>
     >>> data = [Poll(id=x, question='Question ' + str(x), pub_date=now()) for x in range(1000)]
-    >>> objs = bulk_create_with_history(data, Poll, batch_size=500)
+    >>> objs = bulk_update_with_history(data, Poll, batch_size=500)
     >>> for obj in objs: obj.question = 'Duplicate Questions'
     >>> bulk_update_with_history(objs, Poll, ['question'], batch_size=500)
     >>> Poll.objects.first().question
@@ -86,7 +86,7 @@ default manager returns a filtered set), you can specify which manager to use wi
     >>> from simple_history.tests.models import PollWithAlternativeManager
     >>>
     >>> data = [PollWithAlternativeManager(id=x, question='Question ' + str(x), pub_date=now()) for x in range(1000)]
-    >>> objs = bulk_create_with_history(data, PollWithAlternativeManager, batch_size=500, manager=PollWithAlternativeManager.all_polls)
+    >>> objs = bulk_update_with_history(data, PollWithAlternativeManager, batch_size=500, manager=PollWithAlternativeManager.all_polls)
 
 QuerySet Updates with History (Updated in Django 2.2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
