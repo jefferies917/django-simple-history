@@ -85,6 +85,7 @@ Authors
 - Léni Gauffier (`legau <https://github.com/legau>`_)
 - Leticia Portella
 - Lucas Wiman
+- Luke Jefferies (`jefferies917 <https://github.com/jefferies917>`_)
 - Maciej "RooTer" Urbański
 - Marcelo Canina (`marcanuy <https://github.com/marcanuy>`_)
 - Mark Davidoff
